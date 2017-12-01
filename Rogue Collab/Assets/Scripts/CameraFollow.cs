@@ -5,10 +5,6 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour {
    public Transform FollowTransform;
    private bool follow;
-   private void Start() {
-
-   }
-
    private void LateUpdate() {
       if (!follow || FollowTransform == null) {
          return;

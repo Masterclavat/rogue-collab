@@ -8,11 +8,7 @@ public class PlayerInput : MonoBehaviour {
    private void Awake() {
       player = GetComponent<Player>();
    }
-   void Start() {
-
-   }
-
-   void Update() {
+   private void Update() {
       HandleMovement();
    }
 
