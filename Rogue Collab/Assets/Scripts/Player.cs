@@ -11,4 +11,11 @@ public class Player : MonoBehaviour {
    void Update() {
       
    }
+
+   public void Move(MoveDirection dir) {
+      
+   }
+}
+public enum MoveDirection {
+   Left,Top,Right,Bottom
 }
