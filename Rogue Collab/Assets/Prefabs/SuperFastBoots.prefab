@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4825998054976222}
   - component: {fileID: 212414557694123794}
   m_Layer: 0
-  m_Name: SuperSchnelleSchuhe
+  m_Name: SuperFastBoots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
