@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour {
       if (!follow || FollowTransform == null) {
          return;
       }
-      transform.position = FollowTransform.position;
+      transform.position = FollowTransform.position - new Vector3(0, 0, 5);
    }
 
    public void StartFollow() {

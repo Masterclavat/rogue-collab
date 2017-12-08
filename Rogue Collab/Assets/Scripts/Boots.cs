@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Boots : MonoBehaviour {
    private Player player;
-   public bool SuperFastBoots;
-   public bool Boots;
+   public bool HasSuperFastBoots;
+   public bool HasBoots;
    public float BootsSpeed;
 
    void Start() {
@@ -13,10 +13,10 @@ public class Boots : MonoBehaviour {
    }
 
    void Update() {
-      if (Boots){
+      if (HasBoots){
          player.MovementSpeed = BootsSpeed;
       }
-      else if (SuperFastBoots) {
+      else if (HasSuperFastBoots) {
          player.MovementSpeed = BootsSpeed + 3;
       }
 

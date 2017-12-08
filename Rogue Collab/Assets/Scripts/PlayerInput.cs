@@ -20,10 +20,10 @@ public class PlayerInput : MonoBehaviour {
          player.Move(MoveDirection.Right);
       }
       else if (Input.GetKey(KeyCode.W)) {
-         player.Move(MoveDirection.Top);
+         player.Move(MoveDirection.Up);
       }
       else if (Input.GetKey(KeyCode.S)) {
-         player.Move(MoveDirection.Bottom);
+         player.Move(MoveDirection.Down);
       }
    }
 }
