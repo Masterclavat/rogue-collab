@@ -1,11 +1,14 @@
 fileFormatVersion: 2
 guid: c5e43ae335661204fb09bff708ab3959
-timeCreated: 1512148792
+timeCreated: 1514484730
 licenseType: Free
 MonoImporter:
-  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - PlayerFront: {fileID: 21300000, guid: 5be50d32f5e1d3448867bb1675f12165, type: 3}
+  - PlayerBack: {fileID: 21300000, guid: 95fc420641e01254b972cdf970ed3535, type: 3}
+  - PlayerLeft: {fileID: 21300000, guid: 71aa0ffd55205aa4c9a4aa9286cb6897, type: 3}
+  - PlayerRight: {fileID: 21300000, guid: 5a398c0747e52264185fe53310061056, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

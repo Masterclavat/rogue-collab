@@ -6,6 +6,7 @@ public class Player : MonoBehaviour {
    public float MovementSpeed;
    public Coordinates Position;
 
+
    private LevelManager levelManager;
    private bool isMoving;
 
@@ -49,6 +50,18 @@ public class Player : MonoBehaviour {
    }
 
    private void switchSprite(MoveDirection dir) {
+      if (dir == MoveDirection.Down) {
+         GetComponent<SpriteRenderer>().sprite = SpriteList.Instance.PlayerFront;
+      }
+      if (dir == MoveDirection.Left) {
+         GetComponent<SpriteRenderer>().sprite = SpriteList.Instance.PlayerLeft;
+      }
+      if (dir == MoveDirection.Right) {
+         GetComponent<SpriteRenderer>().sprite = SpriteList.Instance.PlayerRight;
+      }
+      if (dir == MoveDirection.Up) {
+         GetComponent<SpriteRenderer>().sprite = SpriteList.Instance.PlayerBack;
+      }
       //Ändert die Richtung in die der Player guckt
       //Das hab ich für dich offen gelassen, Cedric
       //Falls du was suchst, was du machen kannst
@@ -65,7 +78,7 @@ public class Player : MonoBehaviour {
       //Startet eine Coroutine, die den Player zu der angegebenen Position bewegt
       //Coroutinen haben die besonderheit, dass sie
       StartCoroutine(moveSubroutine(pos));
-      
+
       //Wenn wir uns bewegen, dürfen die Gegner auch einen Zug machen
       EnemyManager.Instance.MoveAllEnemies();
    }
