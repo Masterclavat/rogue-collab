@@ -50,25 +50,21 @@ public class Player : MonoBehaviour {
    }
 
    private void switchSprite(MoveDirection dir) {
-      if (dir == MoveDirection.Down) {
-         GetComponent<SpriteRenderer>().sprite = SpriteList.Instance.PlayerFront;
-      }
-      if (dir == MoveDirection.Left) {
-         GetComponent<SpriteRenderer>().sprite = SpriteList.Instance.PlayerLeft;
-      }
-      if (dir == MoveDirection.Right) {
-         GetComponent<SpriteRenderer>().sprite = SpriteList.Instance.PlayerRight;
-      }
-      if (dir == MoveDirection.Up) {
-         GetComponent<SpriteRenderer>().sprite = SpriteList.Instance.PlayerBack;
+      switch (dir) {
+         case MoveDirection.Down:
+            GetComponent<SpriteRenderer>().sprite = SpriteList.Instance.PlayerFront;
+            break;
+         case MoveDirection.Left:
+            GetComponent<SpriteRenderer>().sprite = SpriteList.Instance.PlayerLeft;
+            break;
+         case MoveDirection.Right:
+            GetComponent<SpriteRenderer>().sprite = SpriteList.Instance.PlayerRight;
+            break;
+         case MoveDirection.Up:
+            GetComponent<SpriteRenderer>().sprite = SpriteList.Instance.PlayerBack;
+            break;
       }
       //Ändert die Richtung in die der Player guckt
-      //Das hab ich für dich offen gelassen, Cedric
-      //Falls du was suchst, was du machen kannst
-      //Merk dir, auf die Sprites kannst du so zugreifen:
-      //SpriteList.Instance.PlayerFront
-      //Damit würdest du den Sprite bekommen, wo der Spieler nach unten guckt
-      //Alle vier Richtungen sind bereits in der Klasse SpriteList, musst nur noch den richtigen zuweisen
    }
 
    private void moveToPosition(Coordinates pos) {
